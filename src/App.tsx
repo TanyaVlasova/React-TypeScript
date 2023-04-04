@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC, HTMLAttributes } from 'react';
+import style from './App.module.css';
+import Clock from './components/Clock/Clock';
+import cn from 'classnames';
+import Form from './components/Form/Form';
+import Converter from './components/Converter/Converter';
 
-function App() {
+interface BaseProps extends HTMLAttributes<HTMLDivElement> {
+  classNames?: string;
+}
+
+const App: FC<BaseProps> = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.container}>
+      <Clock className={cn(style.clock)}/>
+      <Form className={cn(style.form)}/>
+      <Converter />
     </div>
   );
 }

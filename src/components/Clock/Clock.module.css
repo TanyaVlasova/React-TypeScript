@@ -1,0 +1,31 @@
+.container {
+  animation: move 3s ease-in-out infinite forwards;
+}
+
+.clock {
+  width: 500px;
+  height: 200px;
+  background-color: #00000083;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: #ff8c00;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-15px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}

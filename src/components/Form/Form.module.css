@@ -1,0 +1,50 @@
+.container {
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.label:last-child {
+  margin-bottom: 0;
+}
+
+.label:nth-child(1) {
+  color: #0000ff;
+}
+
+.label:nth-child(2) {
+  color: #7fff00;
+}
+
+.label:nth-child(3) {
+  color:#ff0088;
+}
+
+.input {
+  width: 500px;
+  padding: 0 10px;
+  display: block;
+  background-color: #00000083;
+  outline: none;
+  font-size: 30px;
+  line-height: 50px;
+  color: #ccc;
+  font-family: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
