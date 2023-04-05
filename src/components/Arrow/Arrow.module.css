@@ -1,0 +1,55 @@
+.wrapper {
+  width: 200px;
+  height: 100%;
+  background-color: #00000038;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button {
+  border: none;
+  background: none;
+  /* animation: stopLevitation 2s ease-in-out running infinite reverse; */
+}
+
+.arrow {
+  /* animation: levitation 4s ease-in-out infinite; */
+}
+
+.wrapper:hover .button {
+  /* animation-play-state: paused; */
+}
+
+.wrapper:not(:hover) .button {
+  
+}
+
+.arrow {
+
+}
+
+@keyframes levitation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px)
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes stopLevitation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px)
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
